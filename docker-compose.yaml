@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  db:
+  postgres:
     image: postgres:latest
     container_name: tpe-project-postgres
     restart: always
@@ -9,7 +9,6 @@ services:
     environment:
       POSTGRES_USER: estudante
       POSTGRES_PASSWORD: ifsp
-      POSTGRES_DB: tpe_test
     volumes:
       - local_pgdata:/var/lib/postgresql/data
   pgadmin:
